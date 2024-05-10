@@ -160,8 +160,8 @@ class Grades(QMainWindow, Ui_MainWindow):
         if self.validate_name() and self.validate_noa() and self.validate_scores():
             row_scores = [int(score) for score in self.scores if score]  # Convert scores to integers
             self.avg_score = max(row_scores)  # I just want max score
-            with open('input_grades.csv', 'a', newline='') as input_grades_csv:
-                content = csv.writer(input_grades_csv)
+            with open('input_test.csv', 'a', newline='') as input_test_csv:
+                content = csv.writer(input_test_csv)
                 content.writerow(['Name', 'Score1', 'Score2', 'Score3', 'Score4', 'Final'])
                 print('stuff')
                 content.writerow(

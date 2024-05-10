@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>632</width>
+    <width>650</width>
     <height>395</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>20</x>
       <y>30</y>
-      <width>151</width>
+      <width>291</width>
       <height>21</height>
      </rect>
     </property>
@@ -29,7 +29,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Student Name:</string>
+     <string>Student Name (First &amp; Last):</string>
     </property>
     <property name="textInteractionFlags">
      <set>Qt::NoTextInteraction</set>
@@ -143,10 +143,10 @@
      <string>SUBMIT</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="name">
+   <widget class="QLineEdit" name="name_input">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>280</x>
       <y>30</y>
       <width>191</width>
       <height>21</height>
@@ -161,6 +161,9 @@
       <width>121</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
    <widget class="QLineEdit" name="score_two">
@@ -211,15 +214,40 @@
      <string>CLEAR</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="noa">
+   <widget class="QComboBox" name="comboBox">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>80</y>
-      <width>21</width>
-      <height>20</height>
+      <x>220</x>
+      <y>90</y>
+      <width>53</width>
+      <height>22</height>
      </rect>
     </property>
+    <item>
+     <property name="text">
+      <string> </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -227,7 +255,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>632</width>
+     <width>650</width>
      <height>18</height>
     </rect>
    </property>
