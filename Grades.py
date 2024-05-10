@@ -40,15 +40,12 @@ class Grades(QMainWindow, Ui_MainWindow):
         name = self.name_input.text()
         if name == "":  # no name entered
             QMessageBox.warning(self, "wrong Name Entered", "Please enter student Full & Last name")
-            print("1")
             return False
         elif name.isdigit():  # I want to check if numbers were entered.
             QMessageBox.warning(self, "Number Entered", "Please enter a First and Last name not Number")
-            print("2")
             return False
         if len(name) < 2:  # I want to check if name length is too short.
             QMessageBox.warning(self, "Name Length Error", "Add more characters in the name section")
-            print("3")
             return False
 
         return True
@@ -64,7 +61,6 @@ class Grades(QMainWindow, Ui_MainWindow):
         """
         if self.comboBox.currentText() == " ":
             QMessageBox.warning(self, "Number of Attempts", "Choose 1-4 attempts in the drop down menu.")
-            print(4)
             return
             # I want to validate the user has entered 1-4
         cmb = int(self.comboBox.currentText())
@@ -119,12 +115,9 @@ class Grades(QMainWindow, Ui_MainWindow):
                 try:
                     score_value = int(score)
                     if score_value < 0 or score_value > 100:
-                        print(5)
                         return False
                 except ValueError:
-                    print(6)
                     return False
-                print(9)
         return True
         # try:
         #     if int(i) < 0:
@@ -163,7 +156,6 @@ class Grades(QMainWindow, Ui_MainWindow):
             with open('input_grades.csv', 'a', newline='') as input_grades_csv:
                 content = csv.writer(input_grades_csv)
                 content.writerow(['Name', 'Score1', 'Score2', 'Score3', 'Score4', 'Final'])
-                print('stuff')
                 content.writerow(
                     [self.name_input.text().strip(), self.scores[0], self.scores[1],
                      self.scores[2], self.scores[3], self.avg_score])
