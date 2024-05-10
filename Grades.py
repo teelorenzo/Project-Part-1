@@ -101,9 +101,7 @@ class Grades(QMainWindow, Ui_MainWindow):
             self.label_6.setVisible(True)
             self.score_four.setVisible(True)
         return True
-
-    # I want to validate if user enter number not letters.
-    # I want to display the labels along with user input.
+        
     def validate_scores(self) -> bool:
         """
         This function is the Score Validation function
@@ -119,19 +117,6 @@ class Grades(QMainWindow, Ui_MainWindow):
                 except ValueError:
                     return False
         return True
-        # try:
-        #     if int(i) < 0:
-        #         QMessageBox.warning(self, "Number", "Please enter a number greater than 0.")
-        #         return False
-        #     elif int(i) > 100:
-        #         QMessageBox.warning(self, "Number", "Please enter a number less than 100.")
-        #         return False
-        # except ValueError:  # this will help with string values.
-        #     QMessageBox.warning(self, "Wrong", "Enter a number 0 - 100")
-        #     return False
-
-        # I want it to not end after pop up
-
     def submit_input(self) -> None:
         """
         This is the submit function
@@ -170,7 +155,7 @@ class Grades(QMainWindow, Ui_MainWindow):
 
     def clear_input(self) -> None:
         """
-        This clears inputs when clear button is hit
+        This clears inputs when the clear button is hit
         """
         self.name_input.clear()
         self.score_one.clear()
@@ -189,4 +174,3 @@ def main():
 if __name__ == '__main__':
     main()
 
-#made changes to push to github
