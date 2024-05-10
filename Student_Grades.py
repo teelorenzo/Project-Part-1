@@ -116,3 +116,4 @@ class Ui_MainWindow(object):
         self.comboBox.setItemText(2, _translate("MainWindow", "2"))
         self.comboBox.setItemText(3, _translate("MainWindow", "3"))
         self.comboBox.setItemText(4, _translate("MainWindow", "4"))
+        

@@ -1,6 +1,6 @@
 from Grades import *
 
-
+#get to git hub
 def main():
     application = QApplication([])
     window = Grades()
